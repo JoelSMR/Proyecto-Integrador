@@ -1,0 +1,75 @@
+/* Colores principales */
+:root {
+    --color-principal: #ffffff;
+    --color-secundario: #ef2279;
+    --color-terciario: #000000;
+}
+
+/* Ejemplo de uso general */
+body {
+    background-color: var(--color-principal);
+    color: var(--color-terciario);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-secundario);
+}
+
+/* Enlaces */
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-terciario);
+}
+
+/* Botones */
+button, .btn {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover, .btn:hover {
+    background-color: var(--color-terciario);
+    color: var(--color-principal);
+}
+
+/* Secciones */
+section {
+    background-color: var(--color-principal);
+    color: var(--color-terciario);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Navegación */
+nav {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    padding: 15px;
+}
+nav a {
+    color: var(--color-principal);
+    margin-right: 15px;
+}
+nav a:hover {
+    color: var(--color-terciario);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-terciario);
+    color: var(--color-principal);
+    text-align: center;
+    padding: 15px 0;
+}
