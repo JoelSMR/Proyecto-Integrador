@@ -1,0 +1,89 @@
+:root {
+    --color-principal: #ffffff;
+    --color-secundario: #ef2279;
+    --color-terciario: #000000;
+  }
+  
+  /* Botón de navegación */
+  .nav-button {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .nav-button:hover {
+    background-color: #ff4f96;
+    transform: translateY(-5px);
+  }
+  
+  /* Estilo del formulario */
+  .login-form {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo negro transparente */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    max-width: 24rem;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Inputs personalizados */
+  .login-input {
+    width: 100%;
+    padding: 0.75rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .login-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Etiquetas (Usuario, Contraseña) */
+  .input-label {
+    color: white;
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Línea decorativa debajo del input si usas <i> para estilo */
+  .input-underline {
+    display: block;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+  
+  /* Botón de enviar */
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-secundario);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff4f96;
+    cursor: pointer;
+  }
+  
