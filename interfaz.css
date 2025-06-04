@@ -4,12 +4,12 @@ body {
   background-color: #f8f9fb;
 }
 
-/* Barra lateral */
+
 .sidebar {
   width: 220px;
   height: 100vh;
   background-color: #fff;
-  border-right: 2px solid #E6007E; /* borde más visible y color rosa */
+  border-right: 2px solid #E6007E; 
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ body {
   border-left: 4px solid #E6007E;
 }
 
-/* Barra superior */
+
 .topbar {
   position: fixed;
   top: 0;
@@ -71,8 +71,8 @@ body {
   right: 0;
   height: 60px;
   background-color: #ffffff;
-  border-bottom: 2px solid #E6007E; /* borde más visible y color rosa */
-  border-left: 2px solid #E6007E;   /* borde izquierdo para diferenciar */
+  border-bottom: 2px solid #E6007E; 
+  border-left: 2px solid #E6007E;   
   display: flex;
   align-items: center;
   z-index: 1;
@@ -96,7 +96,7 @@ body {
   color: #E6007E;
 }
 
-/* Contenido principal */
+
 .main {
   margin-left: 220px;
   padding: 80px 20px 20px 20px;
