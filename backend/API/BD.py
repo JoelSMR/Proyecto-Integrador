@@ -4,7 +4,7 @@ class Api():
     def __init__(self,nombre_bd):
         self.conn_str = (
         "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=localhost\\SQLEXPRESS;"
+        "SERVER=localhost;"
         f"DATABASE={nombre_bd};"
         "Trusted_Connection=yes;"
         )
@@ -14,12 +14,18 @@ class Api():
     
     def comprobar_login(self,conexion, usuario,contraseña):
         cur =conexion.cursor()
-        cur.execute ("""select * from usuarios
-                     where nombre_usuario =%s and contraseña_uusario =%s"""
+        errores =[]
+        try:
+            cur.execute ("""select * from usuarios
+                     where nombre_usuario = ? and contraseña_usuario = ?"""
                      ,(usuario,contraseña)
                      )
+        except Exception as e:
+            errores.append(e)
         retorno =cur.fetchone()
         cur.close()
+        if errores:
+            return errores
         if retorno:
             return True
         else:
