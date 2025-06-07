@@ -4,14 +4,12 @@
   --color-terciario: #000000;
 }
 
-/* Fondo principal blanco sólido */
 body {
   background: #ffffff !important;
   margin: 0;
   font-family: sans-serif;
 }
 
-/* Botón de navegación */
 .nav-button {
   font-weight: bold;
   font-size: 1rem;
@@ -29,7 +27,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* Contenedor del formulario de inicio de sesión */
 .login-form {
   background-color: transparent;
   border: 1px solid rgba(239, 34, 121, 0.4);
@@ -44,7 +41,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Recuadro del título */
 .login-title-box {
   background-color: rgba(239, 34, 121, 0.15);
   padding: 0.75rem 1rem;
@@ -54,11 +50,10 @@ body {
   font-size: 1.25rem;
   color: var(--color-terciario);
   font-weight: bold;
-  margin-bottom: 1.5rem; /* mantiene separación interna sin agrandar el contenedor */
+  margin-bottom: 1.5rem;
   box-sizing: border-box;
 }
 
-/* Inputs personalizados */
 .login-input {
   width: 100%;
   padding: 0.75rem;
@@ -77,7 +72,6 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 
-/* Etiquetas */
 .input-label {
   color: var(--color-terciario);
   position: absolute;
@@ -86,7 +80,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Botón de enviar */
 .submit-button {
   width: 100%;
   padding: 0.75rem;
