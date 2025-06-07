@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fb;
+}
+
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 2px solid #E6007E; 
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  z-index: 2;
+}
+
+.sidebar a {
+  padding: 15px 20px;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid transparent;
+  transition: background-color 0.3s, border-left 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #f0f0f0;
+  border-left: 4px solid #E6007E;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.submenu.open {
+  display: flex;
+}
+
+.submenu a {
+  padding: 10px 30px;
+  font-size: 0.9em;
+  border-left: 4px solid transparent;
+}
+
+.submenu a:hover {
+  background-color: #eaeaea;
+  border-left: 4px solid #E6007E;
+}
+
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 220px;
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #E6007E; 
+  border-left: 2px solid #E6007E;   
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.topbar-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.topbar-options a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.topbar-options a:hover {
+  color: #E6007E;
+}
+
+
+.main {
+  margin-left: 220px;
+  padding: 80px 20px 20px 20px;
+}
+
+.banner {
+  background: url('https://via.placeholder.com/1000x300') no-repeat center;
+  background-size: cover;
+  height: 300px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.courses {
+  margin-top: 30px;
+}
+
+.course-card {
+  background-color: white;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.course-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 15px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
