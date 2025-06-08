@@ -1,8 +1,8 @@
 document.getElementById('button').addEventListener('click', async () => {
-  const correo = document.getElementById('correo').value.trim();
-  const contrasena = document.getElementById('contrasena').value;
+  const usuario = document.getElementById('correo').value.trim();
+  const contraseña = document.getElementById('contrasena').value;
 
-  if (!correo || !contrasena) {
+  if (!usuario || !contraseña) {
     Swal.fire({
       icon: 'error',
       title: 'Error',
@@ -10,22 +10,20 @@ document.getElementById('button').addEventListener('click', async () => {
     });
     return;
   }
-
+let retorno;
   try {
-    const response = await fetch('', { // Cambia la URL por tu endpoint real
+      fetch('http://127.0.0.1:5000/comprobar_login', { // Cambia la URL por tu endpoint real
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ correo, contrasena }),
-    });
+      body: JSON.stringify({ "usuario":usuario, 
+                            "contraseña":contraseña })
+    }).then(response=> response.json())
+    .then(data =>console.log("Respuesta del servidor:", data ))
+    .catch(error => console.log(("fyfuyf"))
+    );
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || 'Error en la autenticación');
-    }
-
-    const data = await response.json();
 
     if (data.success) {
       Swal.fire({
