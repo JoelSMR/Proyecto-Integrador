@@ -30,3 +30,38 @@ class Api():
             return True
         else:
             return False
+
+    def crear_usuario(self,
+                      conexion,
+                      primer_nombre,segundo_nombre,
+                      primer_apellido,segundo_apellido,
+                      cedula_ciudadania,
+                      usuario,contraseña,
+                      rol_id):
+        cursor = conexion.cursor()
+        cursor.execute("""select id 
+                       from usuarios 
+                       where cedula_ciudadania=?""",(cedula_ciudadania,)
+                       )
+        res =cursor.fetchone()
+        if res:
+            return
+        
+        cursor.execute("""insert into usuarios 
+                       (primer_nombre,segundo_nombre,
+                       primer_apellido,segundo_apellido,
+                       cedula_ciudadania,nombre_usuario,contraseña_usuario)
+                       OUTPUT INSERTED.id
+                       VALUES (?,?,?,?,?,?,?)""",
+                       (primer_nombre,segundo_nombre,
+                        primer_apellido,segundo_apellido,
+                        cedula_ciudadania,usuario,contraseña)
+                        )
+        
+        id_usuario_creado =cursor.fetchone()[0]
+        conexion.commit()
+        cursor.execute("""insert into rolesxusuario (usuario_id,rol_id)
+                       VALUES (?,?)""",(id_usuario_creado,rol_id))
+        conexion.commit()
+        cursor.close()
+        
