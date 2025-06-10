@@ -67,6 +67,9 @@ create table sedexgrupos (sede_id int,
 insert into usuarios (cedula_ciudadania,contraseña_usuario,nombre_usuario,primer_nombre,primer_apellido,segundo_nombre,segundo_apellido) 
 values ('13245313','123','J','Juan','Santa','','Santa')
 
+
+insert into roles (id,rol) values (1,'Maestro'),(2,'Estudiante'),(3,'Administrador')
+
 go
 -- Paso 1: Crear login
 CREATE LOGIN usuario_app

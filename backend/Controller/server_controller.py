@@ -18,6 +18,29 @@ def comprobar_inicio_sesion():
         return jsonify({"mensaje":"Denegado",
                         "loguea":False})
 
+@app.route("/crear_usuario",methods = ["POST"])
+def crear_usuario():
+    peticion = request.json
+    if not peticion:
+        return jsonify({"mensaje":"no json valido"}),400
+    primer_nombre = peticion.get("primer_nombre")
+    segundo_nombre = peticion.get("segundo_nombre")
+    primer_apellido = peticion.get("primer_apellido")
+    segundo_apellido = peticion.get("segundo_apellido")
+    cedula_ciudadania = peticion.get("cedula_ciudadania")
+    nombre_usuario = peticion.get("nombre_usuario")
+    contraseña_usuario = peticion.get("contraseña_usuario")
+    rol_id = peticion.get("rol_id")
+    try:
+        conexion = api.obtener_conexion()
+        api.crear_usuario(conexion,primer_nombre,segundo_nombre,
+                          primer_apellido,segundo_apellido,cedula_ciudadania,
+                          nombre_usuario,contraseña_usuario,rol_id
+                          )
+        conexion.close()
+        return jsonify({"mensaje":"Creacion de usuario Exitosa"})
+    except Exception as e:
+        return jsonify({"mensaje":f"error {e}"})
 if __name__ == '__main__':
     app.run(debug=True)
 
