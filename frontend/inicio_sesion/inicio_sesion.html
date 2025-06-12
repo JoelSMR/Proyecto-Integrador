@@ -1,3 +1,5 @@
+
+</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,42 +10,41 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="icon" href="">
 </head>
-<body class="bg-gradient-to-r from-[#000000] to-[#ef2279] flex justify-center items-center min-h-screen relative">
+<body class="bg-white flex justify-center items-center min-h-screen relative">
 
-  <nav class="absolute top-0 left-0 w-full bg-[#ef2279] text-white py-4 px-8 z-10">
+  <!-- Navbar -->
+  <nav class="absolute top-0 left-0 w-full bg-pink-600 text-white py-4 px-8 z-10">
     <div class="flex justify-between items-center">
-      <a href="index.html" class="nav-button">INICIO</a>
+      <a href="../index/index.html" class="text-white font-semibold hover:underline">INICIO</a>
       <span class="text-white text-2xl font-bold">ECESDE</span>
     </div>
   </nav>
 
-  <div class="flex justify-center items-center w-full h-full">
-    <form class="login-form">
-      
-      <!-- Título en recuadro -->
-      <div class="login-title-box">
-        INICIO DE SESIÓN
-      </div>
+  <!-- Login Form Container -->
+  <div class="flex justify-center items-center w-full h-full pt-20">
+    <form class="bg-white shadow-2xl rounded-xl p-8 w-full max-w-sm text-gray-800 border border-gray-200">
+
+      <!-- Title -->
+      <h2 class="text-2xl font-bold mb-6 text-center border-b pb-2">INICIO DE SESIÓN</h2>
 
       <!-- Usuario -->
-      <div class="relative mt-8 mb-8">
-        <input id="correo" type="text" required class="login-input" />
-        <span class="input-label">Usuario</span>
-        <i class="input-underline"></i>
+      <div class="mb-6">
+        <label for="correo" class="block text-sm font-medium mb-1">Usuario</label>
+        <input id="correo" type="text" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400" />
       </div>
 
       <!-- Contraseña -->
-      <div class="relative mb-8">
-        <input id="contrasena" type="password" required class="login-input" />
-        <span class="input-label">Contraseña</span>
-        <i class="input-underline"></i>
+      <div class="mb-6">
+        <label for="contrasena" class="block text-sm font-medium mb-1">Contraseña</label>
+        <input id="contrasena" type="password" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400" />
       </div>
 
       <!-- Botón -->
-      <button id="button" type="button" class="submit-button">INICIAR</button>
+      <button id="button" type="button" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+        INICIAR
+      </button>
     </form>
-    <!-- <script type="module" src="./logo.js"></script> -->
-    <script type="module" src="./login.js"></script>
+    <script type="module" src="../inicio_sesion/inicio_sesion.js"></script>
   </div>
 
 </body>
