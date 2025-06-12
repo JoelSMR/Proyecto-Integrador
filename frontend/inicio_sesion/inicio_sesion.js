@@ -12,7 +12,6 @@ function inicio_sesion() {
   comprobarLogin(usuario, contraseña);
 }
 
-// Envía usuario y contraseña al backend y muestra alertas según la respuesta
 function comprobarLogin(usuario, contraseña) {
   fetch('http://127.0.0.1:5000/comprobar_login', {
     method: 'POST',
